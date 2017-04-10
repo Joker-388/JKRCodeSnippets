@@ -14,11 +14,13 @@
 	<string>46D1A012-B25E-4053-BED5-FC0403AA9B44</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>method swizzle</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Custom Method swizzle</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

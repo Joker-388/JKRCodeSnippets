@@ -3,23 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>definecolor</string>
+	<string>definesingleton</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>Preprocessor</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#import "UIColor+JKRColor.h"
-#define JKRColor(r,g,b,a) [UIColor jkr_colorWithRed:r green:g blue:b alpha:a];
-#define JKRColorHex(_hex_) [UIColor jkr_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]</string>
+	<string>#define singleton_interface(class_name) + (instancetype)shared##class_name;
+#define singleton_implementation(class_name) \
+static class_name *__singleton; \
++ (instancetype)allocWithZone:(struct _NSZone *)zone { \
+static dispatch_once_t onceToken; \
+dispatch_once(&amp;onceToken, ^{ \
+__singleton = [super allocWithZone:zone]; \
+}); \
+return __singleton; \
+} \
++ (instancetype)shared##class_name { \
+if (!__singleton) __singleton = [[class_name alloc] init]; \
+return __singleton; \
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>38005737-6244-47FD-BE32-6E69230352B5</string>
+	<string>C8647B48-924D-4393-A168-36B9027E00A3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>颜色快捷宏定义</string>
+	<string>单例</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Custom Object-c define Color</string>
+	<string>Custom Object-c Singleton</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

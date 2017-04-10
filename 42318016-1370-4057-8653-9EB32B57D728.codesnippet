@@ -44,11 +44,13 @@
 	<string>42318016-1370-4057-8653-9EB32B57D728</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>weak快捷宏定义</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Custom Object-c define weakify</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

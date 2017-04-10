@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>setnavigationbar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[&lt;#Class#&gt; class]]];
+// 这三个一起设置为：[UIImage new], [UIImage new], YES 可以实现全透明顶栏效果
+[navigationBar setBackgroundImage:&lt;#UIImage#&gt; forBarMetrics:UIBarMetricsDefault]; // 顶栏背景图片
+navigationBar.shadowImage = &lt;#UIImage#&gt;; // 和backgroundImage成对设置
+navigationBar.translucent = &lt;#BOOL#&gt;; // 是否有一些透明效果，默认没有
+
+navigationBar.backgroundColor = &lt;#UIColor#&gt;; // 设置的不是纯色，会有模糊效果, 和backgroundImage一起设置会有问题，顶栏颜色只会覆盖到一部分, 大多数时候，单纯设置背景色都不用这个方法
+navigationBar.tintColor = &lt;#UIColor#&gt;; // 影响顶栏左右按钮(UIBarButtonItem)的默认颜色，不设置默认蓝色，不影响中间title的颜色, barButtonItem的设置会覆盖这个设置
+navigationBar.barTintColor = &lt;#UIColor#&gt;; // 设置顶栏背景色，不会被模糊，最直接有效的设置顶栏背景色方法
+
+//设置中间title文字的字体和颜色
+NSMutableDictionary *titleTextAttributesDictionary = [NSMutableDictionary dictionary];
+titleTextAttributesDictionary[NSForegroundColorAttributeName] = &lt;#UIColor#&gt;;
+titleTextAttributesDictionary[NSFontAttributeName] = [UIFont systemFontOfSize:&lt;#font#&gt;];
+navigationBar.titleTextAttributes = titleTextAttributesDictionary;
+
+// 设置左右按钮BarButtonItem文字的字体和颜色
+UIBarButtonItem *barButtonItem = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[&lt;#Class#&gt; class]]];
+// 默认状态下的字体和颜色
+NSMutableDictionary *normalBarButtonItemAttributesDictionary = [NSMutableDictionary dictionary];
+normalBarButtonItemAttributesDictionary[NSForegroundColorAttributeName] = &lt;#UIColor#&gt;;
+normalBarButtonItemAttributesDictionary[NSFontAttributeName] = [UIFont systemFontOfSize:&lt;#font#&gt;];
+[barButtonItem setTitleTextAttributes:normalBarButtonItemAttributesDictionary forState:UIControlStateNormal];
+// 高亮状态下的字体和颜色
+NSMutableDictionary *highLightBarButtomItemAttributesDictionary = [NSMutableDictionary dictionary];
+highLightBarButtomItemAttributesDictionary[NSForegroundColorAttributeName] = &lt;#UIColor#&gt;;
+highLightBarButtomItemAttributesDictionary[NSFontAttributeName] = [UIFont systemFontOfSize:&lt;#font#&gt;];
+[barButtonItem setTitleTextAttributes:highLightBarButtomItemAttributesDictionary forState:UIControlStateHighlighted];
+// 禁用状态下的字体和颜色
+NSMutableDictionary *disableBarButtonItemAttributesDictionary = [NSMutableDictionary dictionary];
+disableBarButtonItemAttributesDictionary[NSForegroundColorAttributeName] = &lt;#UICokor#&gt;;
+disableBarButtonItemAttributesDictionary[NSFontAttributeName] = [UIFont systemFontOfSize:&lt;#font#&gt;];
+[barButtonItem setTitleTextAttributes:disableBarButtonItemAttributesDictionary forState:UIControlStateDisabled];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>797162D7-8AF4-4382-9346-FEB930BD04A8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>设置NavigationController的顶栏</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Custom Object-c NavigationBar Custom</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
