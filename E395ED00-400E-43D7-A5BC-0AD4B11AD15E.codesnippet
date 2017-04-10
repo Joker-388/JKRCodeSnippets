@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>definescreen</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>Preprocessor</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E395ED00-400E-43D7-A5BC-0AD4B11AD15E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>屏幕宽高宏</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Custom Object-c define Screen</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
